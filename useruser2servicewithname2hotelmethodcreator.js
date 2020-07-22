@@ -15,7 +15,7 @@ function createUserUser2ServiceWithName2HotelMethod (lib, mylib) {
       return q.reject(new lib.Error('USER_SERVICE_HAS_NO_HOTEL', 'The User service instance has to have a __hotel'));
     }
     if (!lib.isFunction(this.__service.__hotel[methodname])) {
-      console.error('no method named', methodname);
+      console.error('no method named', methodname, 'on hotel');
       return q.reject(new lib.Error('HOTEL_METHODNAME_DOES_NOT_RESOLVE_TO_A_FUNCTION', 'Methodname '+methodname+' did not resolve to a Hotel function'));
     }
   }

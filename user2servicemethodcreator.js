@@ -9,7 +9,7 @@ function createUser2ServiceMethod (lib, mylib) {
       return q.reject(new lib.Error('SERVICE_ALREADY_DEAD', 'The service instance is already dead for this User instance'));
     }
     if (!lib.isFunction(this.__service[methodname])) {
-      console.error('no method named', methodname);
+      console.error('no method named', methodname, 'on service');
       return q.reject(new lib.Error('METHODNAME_DOES_NOT_RESOLVE_TO_A_FUNCTION', 'Methodname '+methodname+' did not resolve to a function'));
     }
   }
